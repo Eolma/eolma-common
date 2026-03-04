@@ -21,4 +21,6 @@ public final class EventType {
     // Payment
     public static final String PAYMENT_CONFIRMED = "payment.confirmed";
     public static final String PAYMENT_FAILED = "payment.failed";
+    public static final String PAYMENT_EXPIRED = "payment.expired";
+    public static final String PAYMENT_CANCELLED = "payment.cancelled";
 }

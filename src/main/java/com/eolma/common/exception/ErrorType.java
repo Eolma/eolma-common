@@ -25,6 +25,11 @@ public enum ErrorType {
     BID_TOO_LOW("/errors/bid-too-low", "Bid Too Low", 400),
 
     // Payment
+    PAYMENT_NOT_FOUND("/errors/payment-not-found", "Payment Not Found", 404),
+    PAYMENT_ALREADY_EXISTS("/errors/payment-already-exists", "Payment Already Exists", 409),
+    PAYMENT_AMOUNT_MISMATCH("/errors/payment-amount-mismatch", "Payment Amount Mismatch", 400),
+    PAYMENT_EXPIRED("/errors/payment-expired", "Payment Expired", 409),
+    PAYMENT_NOT_PENDING("/errors/payment-not-pending", "Payment Not Pending", 409),
     PAYMENT_FAILED("/errors/payment-failed", "Payment Failed", 502);
 
     private final String type;
