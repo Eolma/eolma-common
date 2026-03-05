@@ -30,7 +30,12 @@ public enum ErrorType {
     PAYMENT_AMOUNT_MISMATCH("/errors/payment-amount-mismatch", "Payment Amount Mismatch", 400),
     PAYMENT_EXPIRED("/errors/payment-expired", "Payment Expired", 409),
     PAYMENT_NOT_PENDING("/errors/payment-not-pending", "Payment Not Pending", 409),
-    PAYMENT_FAILED("/errors/payment-failed", "Payment Failed", 502);
+    PAYMENT_FAILED("/errors/payment-failed", "Payment Failed", 502),
+
+    // OAuth
+    ACCOUNT_EXISTS_DIFFERENT_PROVIDER("/errors/account-exists-different-provider", "Account Exists With Different Provider", 409),
+    OAUTH_PROVIDER_ERROR("/errors/oauth-provider-error", "OAuth Provider Error", 502),
+    PASSWORD_REQUIRED_FOR_LINKING("/errors/password-required-for-linking", "Password Required For Linking", 400);
 
     private final String type;
     private final String title;
