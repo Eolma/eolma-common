@@ -42,9 +42,8 @@ public class GlobalExceptionHandler {
     // JSON 파싱 오류 (잘못된 enum, 타입 불일치, 잘못된 JSON 형식)
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public ProblemDetail handleHttpMessageNotReadable(HttpMessageNotReadableException e) {
-        String message = e.getMostSpecificCause().getMessage();
-        log.warn("Bad request - message not readable: {}", message);
-        return buildClientError("Invalid request body: " + message);
+        log.warn("Bad request - message not readable: {}", e.getMostSpecificCause().getMessage());
+        return buildClientError("Request body is invalid or contains unsupported values.");
     }
 
     // @Valid 검증 실패
