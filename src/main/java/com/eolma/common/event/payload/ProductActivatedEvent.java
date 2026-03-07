@@ -14,7 +14,8 @@ public record ProductActivatedEvent(
         Long reservePrice,
         Long minBidUnit,
         String endType,
-        String endValue,
+        Integer durationHours,
+        Integer maxBidCount,
         List<String> imageUrls
 ) {
 }

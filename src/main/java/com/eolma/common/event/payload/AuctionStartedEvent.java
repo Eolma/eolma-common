@@ -10,7 +10,8 @@ public record AuctionStartedEvent(
         Long reservePrice,
         Long minBidUnit,
         String endType,
-        String endValue,
+        Integer durationHours,
+        Integer maxBidCount,
         LocalDateTime startedAt
 ) {
 }
