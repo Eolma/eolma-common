@@ -17,6 +17,7 @@ public final class EventType {
     public static final String AUCTION_COMPLETED = "auction.completed";
     public static final String AUCTION_FAILED = "auction.failed";
     public static final String BID_PLACED = "bid.placed";
+    public static final String INSTANT_BUY_STARTED = "instant_buy.started";
 
     // Payment
     public static final String PAYMENT_CONFIRMED = "payment.confirmed";
