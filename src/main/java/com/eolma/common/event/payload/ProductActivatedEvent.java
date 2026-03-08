@@ -11,6 +11,7 @@ public record ProductActivatedEvent(
         String conditionGrade,
         Long startingPrice,
         Long instantPrice,
+        Integer instantBuyLockPercent,
         Long reservePrice,
         Long minBidUnit,
         String endType,
