@@ -19,7 +19,7 @@ class KafkaConfigTest {
         KafkaEventDeserializer deserializer = new KafkaEventDeserializer();
 
         BidPlacedEvent payload = new BidPlacedEvent(
-                1L, 100L, 200L, 55000L, 50000L, 3,
+                1L, 100L, "200", 55000L, 50000L, 3,
                 LocalDateTime.of(2026, 3, 4, 12, 0, 0)
         );
 

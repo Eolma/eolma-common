@@ -20,8 +20,8 @@ class DomainEventTest {
     @DisplayName("DomainEvent 생성 시 id, occurredAt 자동 설정")
     void createDomainEvent() {
         ProductActivatedEvent payload = new ProductActivatedEvent(
-                1L, 100L, "Test Product", "Description", "ELECTRONICS",
-                "A", 10000L, 50000L, 30000L, 1000L, "TIME", "24h",
+                1L, "100", "Test Product", "Description", "ELECTRONICS",
+                "A", 10000L, 50000L, 30000L, 1000L, "TIME", 24, null,
                 List.of("https://example.com/img1.jpg")
         );
 
@@ -46,8 +46,8 @@ class DomainEventTest {
     @DisplayName("DomainEvent JSON 직렬화/역직렬화")
     void serializeAndDeserialize() throws Exception {
         ProductActivatedEvent payload = new ProductActivatedEvent(
-                1L, 100L, "Test Product", "Description", "ELECTRONICS",
-                "A", 10000L, 50000L, 30000L, 1000L, "TIME", "24h",
+                1L, "100", "Test Product", "Description", "ELECTRONICS",
+                "A", 10000L, 50000L, 30000L, 1000L, "TIME", 24, null,
                 List.of("https://example.com/img1.jpg")
         );
 

@@ -1,7 +1,7 @@
 package com.eolma.common.event.payload;
 
 public record UserRegisteredEvent(
-        Long userId,
+        String userId,
         String email,
         String nickname
 ) {

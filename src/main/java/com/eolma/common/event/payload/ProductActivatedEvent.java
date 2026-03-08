@@ -4,7 +4,7 @@ import java.util.List;
 
 public record ProductActivatedEvent(
         Long productId,
-        Long sellerId,
+        String sellerId,
         String title,
         String description,
         String category,

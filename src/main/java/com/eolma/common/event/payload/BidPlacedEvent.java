@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public record BidPlacedEvent(
         Long bidId,
         Long auctionId,
-        Long bidderId,
+        String bidderId,
         Long bidAmount,
         Long previousHighestBid,
         int bidSequence,

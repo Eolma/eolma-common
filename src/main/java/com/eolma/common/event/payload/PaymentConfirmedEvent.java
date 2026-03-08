@@ -3,11 +3,11 @@ package com.eolma.common.event.payload;
 import java.time.LocalDateTime;
 
 public record PaymentConfirmedEvent(
-        Long paymentId,
+        String paymentId,
         Long auctionId,
         Long productId,
-        Long buyerId,
-        Long sellerId,
+        String buyerId,
+        String sellerId,
         Long amount,
         String paymentKey,
         LocalDateTime confirmedAt

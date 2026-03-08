@@ -3,9 +3,9 @@ package com.eolma.common.event.payload;
 import java.time.LocalDateTime;
 
 public record PaymentFailedEvent(
-        Long paymentId,
+        String paymentId,
         Long auctionId,
-        Long buyerId,
+        String buyerId,
         Long amount,
         String failureReason,
         LocalDateTime failedAt

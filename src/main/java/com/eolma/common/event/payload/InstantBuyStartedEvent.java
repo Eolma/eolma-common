@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 public record InstantBuyStartedEvent(
         Long auctionId,
         Long productId,
-        Long sellerId,
-        Long buyerId,
+        String sellerId,
+        String buyerId,
         Long price,
         LocalDateTime expiresAt
 ) {

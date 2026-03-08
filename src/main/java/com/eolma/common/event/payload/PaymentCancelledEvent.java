@@ -3,9 +3,9 @@ package com.eolma.common.event.payload;
 import java.time.LocalDateTime;
 
 public record PaymentCancelledEvent(
-        Long paymentId,
+        String paymentId,
         Long auctionId,
-        Long buyerId,
+        String buyerId,
         Long amount,
         LocalDateTime cancelledAt
 ) {
