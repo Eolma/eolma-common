@@ -8,8 +8,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+import com.eolma.common.id.TsidGenerator;
+
 import java.io.IOException;
-import java.util.UUID;
 
 public class RequestLoggingFilter extends OncePerRequestFilter {
 
@@ -22,7 +23,7 @@ public class RequestLoggingFilter extends OncePerRequestFilter {
         // Gateway에서 전달된 traceId 사용, 없으면 새로 생성
         String traceId = request.getHeader(TRACE_ID_HEADER);
         if (traceId == null || traceId.isBlank()) {
-            traceId = UUID.randomUUID().toString().substring(0, 8);
+            traceId = TsidGenerator.generate();
         }
 
         LogContext.setTraceId(traceId);

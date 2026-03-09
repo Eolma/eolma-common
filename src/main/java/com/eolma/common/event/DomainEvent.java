@@ -1,7 +1,8 @@
 package com.eolma.common.event;
 
+import com.eolma.common.id.TsidGenerator;
+
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 public record DomainEvent<T>(
         String id,
@@ -21,7 +22,7 @@ public record DomainEvent<T>(
             T payload
     ) {
         return new DomainEvent<>(
-                UUID.randomUUID().toString(),
+                TsidGenerator.generate(),
                 type,
                 source,
                 LocalDateTime.now(),

@@ -31,6 +31,7 @@ dependencies {
     implementation("org.redisson:redisson-spring-boot-starter:3.36.0")
     implementation("com.fasterxml.jackson.core:jackson-databind")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+    api("com.github.f4b6a3:tsid-creator:5.2.6")
 
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
